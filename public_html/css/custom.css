@@ -1,0 +1,175 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 02-02-2017, 12:55:29
+    Author     : sebas
+*/
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+img {
+    display: block;
+    border: 0;
+    width: 100%;
+    height: auto;
+}
+figure {
+    margin: 0;
+}
+.centered {
+    margin: 0 auto;
+    padding: 0 1em;
+}
+@media screen and (min-width: 52em) {
+    .centered {
+        max-width: 100em;
+    }
+}
+
+/* Base styles of menu */
+.menu-section {
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    border-bottom: 1px solid black;
+}
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background: #4299B4;
+}
+.menu li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: .6em 1em;
+}
+.menu li a:hover {
+    background: darkgrey;
+}
+.menu .active a {
+    background: lightgrey;
+}
+
+/* single-nav media query with flexbox */
+@media only screen and (min-width: 30em) {
+    .single-nav ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .single-nav li {
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+
+
+/* text over image */
+.image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+   height: auto; /* virker ikke */
+}
+
+h2 { 
+   position: absolute; 
+   top: 200px; 
+   left: 0; 
+   max-width: 100%; 
+}
+h2 span { 
+   color: white; 
+   font: bold 26px/47px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}
+h2 span.spacer {
+   padding:0 5px;
+}
+
+.om-mig {
+    font: 30px/45px Helvetica, Sans-Serif; 
+}
+
+@media only screen and (min-width: 40em) {
+    .span {
+        flex-wrap: wrap;
+        margin-top: -1em;
+    }
+    
+}
+.line {
+  
+    border-bottom: 1px solid black;
+}
+
+
+
+
+/* card layout */
+body {
+ 
+}
+.card {
+    background: white;
+    margin-bottom: 2em;	
+}
+.card a {
+    color: black;
+    text-decoration: none;
+}
+.card a:hover {
+    box-shadow: 3px 3px 8px hsl(0, 0%, 60%);
+}
+.card-content {
+    padding: 1.4em;
+}
+.card-content h2 {
+    margin-top: 0;
+    margin-bottom: .5em;
+    font-weight: normal;
+}
+.card-content p {
+    font-size: 95%;
+}
+
+/* Card layout - flexbox stuff */
+@media only screen and (min-width: 40em) {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: -1em;
+    }
+    .card {
+        display: flex;
+        flex: 0 1 calc(50% - .5em);
+        margin-bottom: 1em;
+    }
+}
+@media only screen and (min-width: 60em) {
+    .cards {
+        margin-top: inherit;
+    }
+    
+    .card {
+        flex: 0 1 calc(33% - 1em);
+        margin-bottom: 2em;
+    }
+}
+
+footer {
+        border-top: 1px solid #ddd;
+        color: #999;
+        padding: 10px 0;
+        margin: 15px 0;
+        text-align: center;
+    }
+    
